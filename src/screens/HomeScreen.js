@@ -1,8 +1,10 @@
 import { View, Text, Platform, TouchableOpacity, ScrollView } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
-import { Bars3CenterLeftIcon } from 'react-native-heroicons/outline';
+import { Bars3CenterLeftIcon, MagnifyingGlassIcon } from 'react-native-heroicons/outline';
+import TrendingMovies from "../../components/trendingMovies";
+
 
 
 const ios = Platform.OS == 'ios'
