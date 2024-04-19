@@ -6,7 +6,7 @@ import Carousel from 'react-native-snap-carousel'
 var {width, height} = Dimensions.get('window')
 export default function TrendingMovies({data}){
 const navigation = useNavigation();
-  const handleClick = ()=> {
+  const handleClick = (item)=> {
     navigation.navigate('Movie', item)
   };
   
@@ -29,7 +29,8 @@ const navigation = useNavigation();
 
 const MovieCard = ({item, handleClick}) => {
   return (
-    <TouchableWithoutFeedback>
+    <TouchableWithoutFeedback
+      onPress={()=> handleClick(item)}>
       <Image
         source={require('../images/9(phone).jpg')}
         style={{
