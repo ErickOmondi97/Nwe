@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
 import { Bars3CenterLeftIcon, MagnifyingGlassIcon } from 'react-native-heroicons/outline';
-import TrendingMovies from "../../components/Trending-Movies";
+import TrendingMovies from "../../components/TrendingMovies";
 import MovieList from "../../components/movieList";
 
 
@@ -37,7 +37,7 @@ export default function HomeScreen() {
                 contentContainerStyle={{paddingBottom: 10}}
             >
                 {/* Trending Movies Carousel */}
-                <TrendingMovies data={trending}/>
+                <TrendingMovies title="Trending" data={trending}/>
                 {/* Upcoming Movies Row */}
                 <MovieList title="Upcoming" data={upcoming}/> 
                 
